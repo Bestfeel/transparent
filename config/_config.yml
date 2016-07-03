@@ -1,0 +1,188 @@
+# Hexo Configuration
+## Docs: http://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Feel's blog
+subtitle: 知识从未如此性感
+description: feel's blog | java | scala | python | javascript| linux | nodejs| Machine Learning
+author: feel
+email: 568824204@qq.com
+language: zh-CN
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://wwww.feel88.cn
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source  # 资源文件夹，这个文件夹用来存放内容。
+public_dir: public  # 公共文件夹，这个文件夹用于存放生成的站点文件
+tag_dir: tags   #标签文件夹
+archive_dir: archives  #  归档文件夹
+category_dir: categories   #分类文件夹
+code_dir: downloads/code   #  Include code 文件夹
+i18n_dir: :lang    #  国际化（i18n）文件夹
+skip_render:    # 跳过指定文件的渲染，您可使用 glob 表达式来匹配路径。
+
+# Writing
+new_post_name: :title.md #  新文章的文件名称
+default_layout: post   #  预设布局
+auto_spacing: false  #  在中文和英文之间加入空格
+titlecase: false #  把标题转换为 title case
+external_link: true # 在新标签中打开链接
+filename_case: 0  # 把文件名称转换为 (1) 小写或 (2) 大写
+render_drafts: false   #  显示草稿
+post_asset_folder: false  #  启动 Asset 文件夹 ,文章资源文件夹,会创建一个和文章一样的目录
+relative_link: false  #把链接改为与根目录的相对位址
+future: true  #显示未来的文章
+highlight:      # 代码块的设置
+  enable: true
+  line_number: true
+  backtick_code_block: true
+  auto_detect: true
+  tab_replace:
+
+# Category & Tag   分类
+default_category: uncategorized    #默认分类
+category_map:     # 分类别名  
+  tool: tool
+  bigdata: bigtata
+tag_map:      # 标签别名
+  tool: tool
+  bigdata: bigtata
+
+
+tags:
+
+#配置页头显示哪些菜单
+menu: 
+  首页: /
+  归档: /archives
+  下载: /site
+  关于: /about
+
+# Archives #存档，这里的说明好像不对。全部选择1，这个选项与主题中的选项有时候会有冲突
+# # Archives 默认值为2，这里都修改为1，相应页面就只会列出标题，而非全文
+## 2: Enable pagination
+## 1: Disable pagination
+## 0: Fully Disable
+archive: 1
+category: 1
+tag: 1
+
+#摘要链接文字
+excerpt_link: 阅读全文 
+#按年存档
+archive_yearly: true 
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# 分页
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+# Hexo Beautify
+beautify:
+  types:
+    - html
+    - css
+    - js
+  html:
+    'indent_inner_html': false
+    'indent_size': 2
+    'indent_with_tabs': false
+    # More Options (https://github.com/beautify-web/js-beautify/blob/master/README.md)
+  css:
+    'indent_size': 2
+    'newline_between_rules': true
+    'indent_with_tabs': false
+    # More Options (https://github.com/beautify-web/js-beautify/blob/master/README.md)
+  js:
+    'indent_size': 2
+    'indent_with_tabs': false
+    # More Options (https://github.com/beautify-web/js-beautify/blob/master/README.md)
+
+
+
+
+google_analytics:
+rss: /atom.xml
+
+google_analytics:
+favicon: /favicon.ico
+language: zh-CN
+
+baidu_tongji: 
+
+
+html_minifier:
+  exclude: 
+
+sitemap:
+    path: sitemap.xml
+
+# Markdown语法
+## https://github.com/chjj/marked
+markdown:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+# CSS的stylus格式
+stylus:
+  compress: false
+
+archive_date_format: MMM DD
+fancybox: true #是否开启fancybox效果
+
+widgets: #配置页脚显示哪些小挂件
+- category
+# - tag
+- tagcloud
+- recent_posts
+# - blogroll
+
+
+
+# Content
+archive_date_format: MMM DD
+fancybox: true
+
+# 评论插件
+duoshuo_shortname: feel #多说账号
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.ico
+
+# 扩展插件
+## Plugins: http://hexo.io/plugins/
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+#  主题
+## Themes: http://hexo.io/themes/   modernist  light  transparent
+theme: transparent
+exclude_generator:
+
+
+# 发布
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: git@github.com:Bestfeel/blog.git
+  branch: master
